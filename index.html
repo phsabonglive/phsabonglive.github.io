@@ -165,7 +165,23 @@
     </div>
 
     <script>
-        window.domains = [       
+        window.domains = [     
+            {
+                name: "PHSabong.live",
+                domain: "phsabong.net",
+                url: "https://phsabong.net/",
+                redirectUrl: "",
+                health_check: {
+                    api: {
+                        url: "https://phsabong.net/health",
+                        status: 0
+                    },
+                    static: {
+                        url: "https://static.phsabong.net//health.htm",
+                        status: 0
+                    }
+                }
+            },
             {
                 name: "PHSabong.live",
                 domain: "phsabong.live",
@@ -213,7 +229,7 @@
 
                 storedDomain: null,
                 firstAvailableDomain: null,
-                localStorageKey: 'last_used_domain_phs'
+                localStorageKey: 'last_used_domain_phs2'
             },
             mounted(){
                 this.changeStatus(this.statusMessages.init, 0);
